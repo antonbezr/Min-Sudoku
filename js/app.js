@@ -267,7 +267,7 @@ function main() {
   var x = document.cookie;
   console.log(document.cookie.split(";"));
 
-  input();
+  // input();
   draw();
 }
 

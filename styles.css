@@ -31,6 +31,11 @@
   --color-2-d: #401b47;
   --color-3-d: #580d33;
 
+  --color-0-h-d: #949468;
+  --color-1-h-d: #076198;
+  --color-2-h-d: #6d246a;
+  --color-3-h-d: #9d0a43;
+
   --sudoku-out-tiles-d: #242b3d;
   --sudoku-out-board-d: #53517f;
 
@@ -76,6 +81,11 @@
   --color-2-l: #fee0cb;
   --color-3-l: #fec3bf;
 
+  --color-0-h-l: #949468;
+  --color-1-h-l: #076198;
+  --color-2-h-l: #6d246a;
+  --color-3-h-l: #9d0a43;
+
   --sudoku-out-tiles-l: #d8d8d8;
   --sudoku-out-board-l: #636363;
 
@@ -118,6 +128,11 @@
   --color-1: var(--color-1-d);
   --color-2: var(--color-2-d);
   --color-3: var(--color-3-d);
+
+  --color-0-h: var(--color-0-h-d);
+  --color-1-h: var(--color-1-h-d);
+  --color-2-h: var(--color-2-h-d);
+  --color-3-h: var(--color-3-h-d);
 
   --notes-bkg: var(--bg);
   --notes-out: var(--btn-out);
@@ -401,13 +416,13 @@ input:focus {
 /*************************** CANVAS SETUP ***************************/
 
 .wrap {
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .wrapper {
-  position: relative;
-  width: 450px;
-  height: 450px;
+  /*position: relative;*/
+  height: 100%;
+  width: 100%;
   margin: auto;
   margin-bottom: 25px; /*47*/
   z-index: 1;
@@ -415,7 +430,7 @@ input:focus {
 
 .wrapper canvas {
   background-color: transparent !important;
-  position: absolute;
+  /*position: absolute;*/
   left: 0;
 }
 
@@ -461,6 +476,10 @@ input:focus {
   background-color: var(--color-3);
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+#c0:hover {
+  background-color: black;
 }
 
 /*************************** NUMBER/NOTES BUTTONS ***************************/

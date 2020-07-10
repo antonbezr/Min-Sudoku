@@ -6,15 +6,25 @@ function initalizeCanvases(id) {
   canvas.height *= CANVAS_SCALE;
   canvas.style.width = oldWidth.toString() + "px";
   canvas.style.height = oldHeight.toString() + "px";
+
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerWidth;
+
 }
 
 function drawGrid() {
   // Initalize canvas
   var ctx = board.getContext("2d");
+  // ctx.canvas.width  = window.innerWidth;
+  // ctx.canvas.height = window.innerHeight;
+
+
+
+
   let style = getComputedStyle(document.body);
   let size = board.width;
   //ctx.clearRect(0, 0, size, size);
-
   ctx.beginPath();
   ctx.shadowBlur = 0;
   ctx.lineWidth = 2.5;
@@ -72,6 +82,11 @@ function drawGuesses() {
 function drawBoard() {
   // Initialize canvas
   let ctx = board.getContext('2d');
+
+
+  // ctx.canvas.width  = window.innerWidth;
+  // ctx.canvas.height = window.innerHeight;
+
   let size = board.width;
   let tileSize = (size - 10) / 9;
   ctx.clearRect(0, 0, size, size);
@@ -242,10 +257,10 @@ function switchTheme() {
 }
 
 function draw() {
-  initalizeCanvases("guesses");
+  // initalizeCanvases("guesses");
   initalizeCanvases("board");
-  initalizeCanvases("selector");
+  // initalizeCanvases("selector");
   drawGrid();
-  document.fonts.load('12pt "Open Sans"').then(drawGuesses);
+  // document.fonts.load('12pt "Open Sans"').then(drawGuesses);
   document.fonts.load('12pt "Open Sans"').then(drawBoard);
 }

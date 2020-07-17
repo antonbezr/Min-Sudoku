@@ -1,6 +1,20 @@
+/*************************** FONTS ***************************/
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+/*************************** SETUP ***************************/
+
 * {
   text-align: center;
-  /*font-family: Open Sans, sans-serif;*/
+  font-family: Open Sans, sans-serif;
   /*background-color: var(--bg);*/
   margin: 0;
   cursor: auto;
@@ -19,6 +33,8 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
+/*************************** TOP MENU BAR ***************************/
+
 #text {
   display: none;
 }
@@ -34,17 +50,24 @@
 
 #btn {
   display: block;
-  width: 40vh;
+  width: 100vh;
   margin: auto;
   border-style: solid;
   border-color: transparent;
-  padding: 3vh; 
   margin: 1vh;
 }
 
 #btn a {
-  font-size: 2vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vh;
+  height: 5vh;
+
+  font-size: 3vh;
   border-style: solid;
-  padding: 3vh;
+  border-width: 0.2vh;
+  border-radius: 0.5vh;
+
   margin-right: 0.5vh;
 }

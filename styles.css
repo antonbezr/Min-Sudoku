@@ -24,7 +24,9 @@
 }
 
 #button {
-  display: inline-block;
+  display: block;
+  width: 10vh;
+  margin: auto;
   border-style: solid;
   font-size: 2vh;
   padding: 3vh;
@@ -32,9 +34,11 @@
 
 #btn {
   display: block;
+  width: 40vh;
+  margin: auto;
   border-style: solid;
   border-color: transparent;
-  padding: 3vh;  
+  padding: 3vh; 
   margin: 1vh;
 }
 

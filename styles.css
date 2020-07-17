@@ -73,8 +73,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
 
     font-size: 5vw;
     border-style: solid;
@@ -84,7 +84,6 @@
     margin-right: 0.2vw;
   }
 }
-
 
 #text {
   display: none;

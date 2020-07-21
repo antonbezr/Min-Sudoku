@@ -1,3 +1,178 @@
+/*************************** DARK MODE COLORS ***************************/
+
+:root {
+
+  --bg-d: #121123;
+
+  --toggle-d: #2b2b45;
+
+  --new-game-bkg-d: #2b2b45;
+  --new-game-txt-d: #b8b5ee;
+
+  --new-game-menu-txt-d: #53517f;
+  --new-game-menu-bkg-d: #121123;
+  --new-game-menu-out-d: #262641;
+  --new-game-menu-hov-d: #262641;
+
+  --done-bkg-d: #121123;
+  --done-txt-d: #44c896;
+  --done-out-d: #233e46;
+  --done-hov-d: #233e46;
+
+  --popup-bkg-d: #21213a;
+  --popup-txt-d: #53517f;
+
+  --btn-out-d: #262641;
+  --btn-hov-d: #262641;
+  --btn-txt-d: #53517f;
+
+  --color-0-d: #535346;
+  --color-1-d: #0d395e;
+  --color-2-d: #401b47;
+  --color-3-d: #580d33;
+
+  --color-0-h-d: #949468;
+  --color-1-h-d: #076198;
+  --color-2-h-d: #6d246a;
+  --color-3-h-d: #9d0a43;
+
+  --sudoku-out-tiles-d: #242b3d;
+  --sudoku-out-board-d: #53517f;
+
+  --sudoku-tile-fill-0-d: #121123;
+  --sudoku-tile-fill-1-d: #1b1b32;
+  --sudoku-tile-text-0-d: #44c896;
+  --sudoku-tile-text-1-d: #b8b5ee;
+  --sudoku-tile-text-err-d: #f53b57;
+
+  --sudoku-selector-d: #44c896;
+
+  --sudoku-out-guess-0-d: #171627;
+  --sudoku-out-guess-1-d: #53517f;
+
+/*************************** LIGHT MODE COLORS ***************************/
+
+  --bg-l: #fdfdfd;
+
+  --toggle-l: #d8d8d8;
+
+  --new-game-bkg-l: #ebebeb;
+  --new-game-txt-l: #636363;
+
+  --new-game-menu-txt-l: #828282;
+  --new-game-menu-bkg-l: #fdfdfd;
+  --new-game-menu-out-l: #ebebeb;
+  --new-game-menu-hov-l: #ebebeb;
+
+  --done-bkg-l: #fdfdfd;
+  --done-txt-l: #6a89cc;
+  --done-out-l: #e0e6f3;
+  --done-hov-l: #e0e6f3;
+
+  --popup-bkg-l: #ededed;
+  --popup-txt-l: #b0b0b0;
+
+  --btn-out-l: #ebebeb;
+  --btn-hov-l: #ebebeb;
+  --btn-txt-l: #828282;
+
+  --color-0-l: #c1eddd;
+  --color-1-l: #e6f2d3;
+  --color-2-l: #fee0cb;
+  --color-3-l: #fec3bf;
+
+  --color-0-h-l: #949468;
+  --color-1-h-l: #076198;
+  --color-2-h-l: #6d246a;
+  --color-3-h-l: #9d0a43;
+
+  --sudoku-out-tiles-l: #d8d8d8;
+  --sudoku-out-board-l: #636363;
+
+  --sudoku-tile-fill-0-l: #fdfdfd;
+  --sudoku-tile-fill-1-l: #ebebeb;
+  --sudoku-tile-text-0-l: #6a89cc;
+  --sudoku-tile-text-1-l: #636363;
+  --sudoku-tile-text-err-l: #c23616;
+
+  --sudoku-selector-l: #6a89cc;
+
+  --sudoku-out-guess-0-l: #f7f7f7;
+  --sudoku-out-guess-1-l: #b1b1b1;
+
+/*************************** COLOR SETUP ***************************/
+
+  --bg: var(--bg-d);
+
+  --new-game-bkg: var(--new-game-bkg-d);
+  --new-game-txt: var(--new-game-txt-d);
+
+  --new-game-menu-txt: var(--new-game-menu-txt-d);
+  --new-game-menu-bkg: var(--new-game-menu-bkg-d);
+  --new-game-menu-out: var(--new-game-menu-out-d);
+  --new-game-menu-hov: var(--new-game-menu-hov-d);
+
+  --done-bkg: var(--done-bkg-d);
+  --done-txt: var(--done-txt-d);
+  --done-out: var(--done-out-d);
+  --done-hov: var(--done-hov-d);
+
+  --popup-bkg: var(--popup-bkg-d);
+  --popup-txt: var(--popup-txt-d);
+
+  --btn-out: var(--btn-out-d);
+  --btn-hov: var(--btn-hov-d);
+  --btn-txt: var(--btn-txt-d);
+
+  --color-0: var(--color-0-d);
+  --color-1: var(--color-1-d);
+  --color-2: var(--color-2-d);
+  --color-3: var(--color-3-d);
+
+  --color-0-h: var(--color-0-h-d);
+  --color-1-h: var(--color-1-h-d);
+  --color-2-h: var(--color-2-h-d);
+  --color-3-h: var(--color-3-h-d);
+
+  --notes-bkg: var(--bg);
+  --notes-out: var(--btn-out);
+  --notes-hov: var(--btn-hov);
+  --notes-txt: var(--btn-txt);
+
+  --sudoku-out-tiles: var(--sudoku-out-tiles-d);
+  --sudoku-out-board: var(--sudoku-out-board-d);
+
+  --sudoku-tile-fill-0: var(--sudoku-tile-fill-0-d);
+  --sudoku-tile-fill-1: var(--sudoku-tile-fill-1-d);
+  --sudoku-tile-text-0: var(--sudoku-tile-text-0-d);
+  --sudoku-tile-text-1: var(--sudoku-tile-text-1-d);
+  --sudoku-tile-text-err: var(--sudoku-tile-text-err-d);
+
+  --sudoku-selector: var(--sudoku-selector-d);
+
+  --sudoku-out-guess-0: var(--sudoku-out-guess-0-d);
+  --sudoku-out-guess-1: var(--sudoku-out-guess-1-d);
+
+  --size: 0px;
+
+  --scale-1:  calc(var(--size) / 400);
+  --scale-2:  calc(var(--size) / 200);
+  --scale-4:  calc(var(--size) / 118);
+  --scale-6:  calc(var(--size) / 80);
+  --scale-7:  calc(var(--size) / 68);
+  --scale-8:  calc(var(--size) / 59);
+  --scale-10: calc(var(--size) / 47);
+  --scale-12: calc(var(--size) / 39);
+  --scale-14: calc(var(--size) / 34);
+  --scale-16: calc(var(--size) / 31);
+  --scale-20: calc(var(--size) / 22.5);
+  --scale-24: calc(var(--size) / 19);
+  --scale-26: calc(var(--size) / 18);
+  --scale-32: calc(var(--size) / 16);
+  --scale-40: calc(var(--size) / 11.7);
+  --scale-43: calc(var(--size) / 11);
+}
+
 /*************************** FONTS ***************************/
 
 @font-face {
@@ -12,10 +187,19 @@
 
 /*************************** SETUP ***************************/
 
+button:focus {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
 * {
   text-align: center;
   font-family: Open Sans, sans-serif;
-  /*background-color: var(--bg);*/
+  background-color: var(--bg);
+  padding: 0;
   margin: 0;
   cursor: auto;
   -webkit-user-select: none;
@@ -25,75 +209,225 @@
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
-/*************************** TOP MENU BAR ***************************/
+/*************************** MAIN MENU BAR ***************************/
 
-@media only screen and (orientation: landscape) {
-  #btn {
-    display: block;
-    width: 60vw;
-    margin: auto;
-    border-style: solid;
-    border-color: transparent;
-    margin: 1vw;
-  }
-
-  #btn a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.5vw;
-    height: 3.5vw;
-
-    font-size: 2vw;
-    border-style: solid;
-    border-width: 0.1vw;
-    border-radius: 0.3vw;
-    margin-right: 0.3vw;
+#main-menu {
+  margin-bottom: var(--scale-10);
 }
 
-@media only screen and (orientation: portrait) {
-  #btn {
-    display: block;
-    width: 90vw;
-    margin: auto;
-    border-style: solid;
-    border-color: transparent;
-    margin: 1vw;
-  }
-
-  #btn a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 8vw;
-    height: 8vw;
-
-    font-size: 5vw;
-    border-style: solid;
-    border-width: 0.2vw;
-    border-radius: 0.5vw;
-
-    margin-right: 0.2vw;
-  }
+.dark {
+  font-size: var(--scale-26);
+  color: var(--toggle-d);
+  position: relative;
+  top: var(--scale-4);
+  margin-right: var(--scale-24);
+  border: none;
 }
 
-#text {
+.light {
+  font-size: var(--scale-32);
+  color: var(--toggle-l);
+  position: relative;
+  top: var(--scale-6);
+  margin-right:var(--scale-20);
+  border: none;
+}
+
+
+#difficulty {
+  color: var(--btn-txt);
+  font-size: var(--scale-16);
+  padding-top: var(--scale-6);
+  padding-bottom: var(--scale-6);
+}
+
+#difficulty b {
+  font-family: Open Sans Bold;
+  font-size: var(--scale-16);
+}
+
+#new-game {
+  font-size: var(--scale-16);
+  background-color: var(--new-game-bkg);
+  color: var(--new-game-txt);
+  border-radius: var(--scale-4);
+  margin-left: var(--scale-24);
+  padding: var(--scale-8);
+  border:none;
+}
+
+#share-board {
+  font-size: var(--scale-24);
+  color: var(--sudoku-selector);
+  border-radius: var(--scale-4);
+  margin-left: var(--scale-24);
+  padding: var(--scale-8);
+  position: relative;
+  top: var(--scale-4);
+  border:none;
+}
+
+#link {
+  border: none;
+  pointer-events: none;
+}
+
+/*************************** BOARD SHARE POPUP ***************************/
+
+#popup-txt {
+  font-size: var(--scale-12);
+  padding: var(--scale-4);
+  padding-left: var(--scale-8);
+  padding-right: var(--scale-8);
+  background-color: var(--popup-bkg);
+  color: var(--popup-txt);
+  border: solid;
+  border-width: var(--scale-1);
+  border-radius: var(--scale-4);
+  border-color: var(--popup-bkg);
+}
+
+.hidden-no-animation {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms ease, visibility 0s ease 0s;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms ease, visibility 0s ease 500ms;
+}  
+
+/*************************** NEW GAME OPTIONS ***************************/
+
+
+.secondary-menu {
+  margin-bottom: var(--scale-10);
+}
+
+.new-game-difficulty {
   display: none;
 }
 
-#button {
-  display: block;
-  width: 10vw;
-  margin: auto;
+.new-game-difficulty button {
+  font-size: var(--scale-12);
+  padding: var(--scale-4);
+  padding-left: var(--scale-8);
+  padding-right: var(--scale-8);
+  background-color: var(--new-game-menu-bkg);
+  color: var(--new-game-menu-txt);
+  border: solid;
+  border-width: var(--scale-1);
+  border-left: none;
+  border-color: var(--new-game-menu-out);
+}
+
+.new-game-difficulty button:hover {
+  background-color: var(--new-game-menu-hov);
+}
+
+#custom {
+  border-left: solid;
+  border-width: var(--scale-1);
+  border-color: var(--new-game-menu-out);
+  border-top-left-radius: var(--scale-4);
+  border-bottom-left-radius: var(--scale-4);
+}
+
+#hard {
+  border-top-right-radius: var(--scale-4);
+  border-bottom-right-radius: var(--scale-4);
+}
+
+.done {
+  display: none;
+  font-size: var(--scale-12);
+  padding: var(--scale-4);
+  padding-left: var(--scale-10);
+  padding-right: var(--scale-10);
+  background-color: var(--done-bkg);
+  color: var(--done-txt);
+  border: solid;
+  border-width: var(--scale-1);
+  border-color: var(--done-out);
+  border-radius: var(--scale-4);
+}
+
+.done b {
+  background-color: transparent;
+  font-family: Open Sans Bold;
+}
+
+.done:hover {
+  background-color: var(--done-hov);
+}
+
+/*************************** SHOW/HIDE ***************************/
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+/*************************** NUMBER/NOTES BUTTONS ***************************/
+
+#bot-btn-menu {
+  width: var(--size);
   border-style: solid;
-  font-size: 2vw;
-  padding: 3vw;
+  border-color: transparent;
+  margin-top: 1vh;
+}
+
+#bot-btn-menu button {
+  width: var(--scale-43);
+  height: var(--scale-43);
+
+  background-color: var(--bg);
+  color: var(--btn-txt);
+  border-color: var(--btn-out);
+
+  font-size: var(--scale-24);
+  border-style: solid;
+  border-width: var(--scale-1);
+  border-radius: var(--scale-4);
+}
+
+#bot-btn-menu button:hover {
+  background-color: var(--btn-out);
+}
+
+#b0, #b1, #b2, #b3, #b4, #b5, #b6, #b6, #b7, #b8 {
+  margin-right: var(--scale-4);
+}
+
+#notes:hover {
+  background-color: var(--btn-out);
+}
+
+#notes:focus {
+  outline: none;
+}
+
+.disabled:hover {
+  background-color: var(--bg) !important;
+}
+
+.selected {
+  background-color: var(--btn-out) !important;
 }

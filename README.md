@@ -6,7 +6,7 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 
 ## Features
 
-1. **Dark/Light Theme** - Adjust the theme based on your preference/environment.
+1. **Dark/Light Mode** - Adjust the theme based on your preference/environment.
 2. **Easy, Medium, and Hard Difficulty** - Play at your preferred difficulty.
 3. **Import Custom Sudoku** - Play any Sudoku you want (ex: NYT daily Sudokus).
 4. **Sudoku Share** - Send a link to your friends so you can play the same Sudoku.

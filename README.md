@@ -6,12 +6,12 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 
 ## Features
 
-1. Dark/Light theme - Adjust the theme based on your preference/environment.
-2. Easy, Medium, and Hard difficulty - Play at your preferred difficulty.
-3. Import custom Sudoku - Play any Sudoku you want (ex: NYT daily Sudokus).
-4. Sudoku share - Send a link to your friends so you can play the same puzzle.
-5. Notes mode - Insert potential solutions for each Sudoku square.
-6. Cookie save state - Saves Sudoku progress despite closing out window.
+1. **Dark/Light Theme** - Adjust the theme based on your preference/environment.
+2. **Easy, Medium, and Hard Difficulty** - Play at your preferred difficulty.
+3. **Import Custom Sudoku** - Play any Sudoku you want (ex: NYT daily Sudokus).
+4. **Sudoku Share** - Send a link to your friends so you can play the same puzzle.
+5. **Notes Mode** - Insert potential solutions for each Sudoku square.
+6. **Cookie Save State** - Saves Sudoku progress despite closing out window.
 
 ## Backend
 

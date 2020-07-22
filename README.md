@@ -1,6 +1,7 @@
 # Min-Sudoku
 
-https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
+## Demo
+The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
 
 ## Backend
 

@@ -4,14 +4,6 @@
 
 Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The puzzle setter provides a partially completed grid, which for a well-posed puzzle has a single solution.
 
-## Development
-
-The frontend was developed using vanilla JavaScript and pure CSS. The Sudoku grid is displayed using HTML5 canvas, which seamlessly integrates into many browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices.
-
-Libraries used:
-* Icons - Font Awesome.
-* Clipboard - clipboard.js.
-
 ## Features
 
 1. **Dark/Light Mode** - Adjust the theme based on your preference/environment.
@@ -20,6 +12,14 @@ Libraries used:
 4. **Sudoku Share** - Send a link to your friends so you can play the same Sudoku.
 5. **Notes Mode** - Insert potential solutions for each Sudoku square.
 6. **Cookie Save State** - Saves Sudoku progress despite closing out window.
+
+## Development
+
+The frontend was developed using vanilla JavaScript and pure CSS. The Sudoku grid is displayed using HTML5 canvas, which seamlessly integrates into many browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices.
+
+Libraries used:
+* Icons - Font Awesome.
+* Clipboard - clipboard.js.
 
 ## Backend
 

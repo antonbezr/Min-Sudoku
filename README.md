@@ -21,3 +21,17 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 
 ## Demo
 The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
+
+<p align="center">
+    <em>A demo of gameplay can be viewed here: </em>https://youtu.be/759O_8KQbbY </em>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/RJc4p2D.png" width="384" height="384">
+  <img src="https://i.imgur.com/PKrdSzC.png" width="384" height="384">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/AjrgvsI.png" width="384" height="384">
+  <img src="https://i.imgur.com/Qv5EE6T.png" width="384" height="384">
+</p>

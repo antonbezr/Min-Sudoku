@@ -20,10 +20,10 @@ Having a backend server for this project was necessary because generating Sudoku
 The backend of the project is implemented using PHP and Python. The PHP code is stored on the server and allows users to make database requests. The Python code is stored locally and allows the admin to upload Sudoku puzzles to the server. The backend repository is hosted on Heroku and can be viewed here: https://github.com/antonbezr/Min-Sudoku-Backend.
 
 ## Demo
-The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
 
 <p align="center">
-    <em>A demo of gameplay can be viewed here: </em>https://youtu.be/759O_8KQbbY </em>
+    <em>The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
+ </em>
 </p>
 
 <p align="center">

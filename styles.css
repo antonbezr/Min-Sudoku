@@ -14,10 +14,10 @@
   --new-game-menu-out-d: #262641;
   --new-game-menu-hov-d: #262641;
 
-  --done-bkg-d: #121123;
-  --done-txt-d: #44c896;
-  --done-out-d: #233e46;
-  --done-hov-d: #233e46;
+  --copy-bkg-d: #121123;
+  --copy-txt-d: #44c896;
+  --copy-out-d: #233e46;
+  --copy-hov-d: #233e46;
 
   --popup-bkg-d: #21213a;
   --popup-txt-d: #53517f;
@@ -64,10 +64,10 @@
   --new-game-menu-out-l: #ebebeb;
   --new-game-menu-hov-l: #ebebeb;
 
-  --done-bkg-l: #fdfdfd;
-  --done-txt-l: #6a89cc;
-  --done-out-l: #e0e6f3;
-  --done-hov-l: #e0e6f3;
+  --copy-bkg-l: #fdfdfd;
+  --copy-txt-l: #6a89cc;
+  --copy-out-l: #e0e6f3;
+  --copy-hov-l: #e0e6f3;
 
   --popup-bkg-l: #ededed;
   --popup-txt-l: #b0b0b0;
@@ -112,10 +112,10 @@
   --new-game-menu-out: var(--new-game-menu-out-d);
   --new-game-menu-hov: var(--new-game-menu-hov-d);
 
-  --done-bkg: var(--done-bkg-d);
-  --done-txt: var(--done-txt-d);
-  --done-out: var(--done-out-d);
-  --done-hov: var(--done-hov-d);
+  --copy-bkg: var(--copy-bkg-d);
+  --copy-txt: var(--copy-txt-d);
+  --copy-out: var(--copy-out-d);
+  --copy-hov: var(--copy-hov-d);
 
   --popup-bkg: var(--popup-bkg-d);
   --popup-txt: var(--popup-txt-d);
@@ -321,11 +321,11 @@ input:focus {
   padding: var(--scale-4);
   padding-left: var(--scale-10);
   padding-right: var(--scale-10);
-  background-color: var(--done-bkg);
-  color: var(--done-txt);
+  background-color: var(--new-game-menu-bkg);
+  color: var(--new-game-menu-txt);
   border: solid;
   border-width: var(--scale-1);
-  border-color: var(--done-out);
+  border-color: var(--new-game-menu-out);
   border-radius: var(--scale-4);
 }
 
@@ -335,23 +335,22 @@ input:focus {
 }
 
 #done:hover {
-  background-color: var(--done-hov);
+  background-color: var(--new-game-menu-hov);
 }
 
 #copy-txt {
   display: inline;
   min-width: calc(var(--scale-half) - var(--scale-10));
-  /*width: value.length;*/
   font-size: var(--scale-12);
   padding: var(--scale-4);
   padding-left: var(--scale-10);
   padding-right: var(--scale-10);
-  background-color: var(--done-bkg);
-  color: var(--done-txt);
+  background-color: var(--copy-bkg);
+  color: var(--copy-txt);
   border: solid;
   border-right: none;
   border-width: var(--scale-1);
-  border-color: var(--done-out);
+  border-color: var(--copy-out);
   border-radius: var(--scale-4);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -363,18 +362,18 @@ input:focus {
   padding: var(--scale-4);
   padding-left: var(--scale-10);
   padding-right: var(--scale-10);
-  background-color: var(--done-bkg);
-  color: var(--done-txt);
+  background-color: var(--copy-bkg);
+  color: var(--copy-txt);
   border: solid;
   border-width: var(--scale-1);
-  border-color: var(--done-out);
+  border-color: var(--copy-out);
   border-radius: var(--scale-4);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 #copy-btn:hover {
-  background-color: var(--done-hov);
+  background-color: var(--copy-hov);
 }
 
 .hidden {

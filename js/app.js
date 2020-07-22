@@ -321,18 +321,15 @@ function main() {
    const urlParams = new URLSearchParams(queryString);
    encodedBoard = urlParams.get('board');
    customId = parseInt(urlParams.get('id'));
-
    generateCoords();
    generateEmptyBoard();
    let decodeSuccessful = importBoard();
-
    if (navigator.cookieEnabled && document.cookie != "") {
       loadCookie(decodeSuccessful);
       validateBoard(false);
    } else if (!decodeSuccessful) {
       newGame("easy");
    }
-
    input();
    draw(true);
 }

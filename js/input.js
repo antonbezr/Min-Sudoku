@@ -3,7 +3,7 @@ function toggleNewGame() {
       copy.classList.remove("hide");
       doneButton.classList.toggle("hide");
       customGame = !customGame;
-      // update("close-custom-game");
+      update("close-custom-game");
    } else {
       copy.classList.toggle("hide");
       copy.classList.add("hidden");
@@ -55,6 +55,11 @@ function keyPress() {
    // Close board editor if user finished creating board
    if (customGame && event.keyCode == 13) {
       toggleDone();
+   }
+
+   if (copyTime && event.keyCode == 13) {
+      copyBtn.click();
+      toggleCopy();
    }
 
    // E pressed (enable notes (guesses))
@@ -203,10 +208,10 @@ function switchTheme() {
       root.style.setProperty('--new-game-menu-bkg', 'var(--new-game-menu-bkg-l)');
       root.style.setProperty('--new-game-menu-out', 'var(--new-game-menu-out-l)');
       root.style.setProperty('--new-game-menu-hov', 'var(--new-game-menu-hov-l)');
-      root.style.setProperty('--done-bkg', 'var(--done-bkg-l)');
-      root.style.setProperty('--done-txt', 'var(--done-txt-l)');
-      root.style.setProperty('--done-out', 'var(--done-out-l)');
-      root.style.setProperty('--done-hov', 'var(--done-hov-l)');
+      root.style.setProperty('--copy-bkg', 'var(--copy-bkg-l)');
+      root.style.setProperty('--copy-txt', 'var(--copy-txt-l)');
+      root.style.setProperty('--copy-out', 'var(--copy-out-l)');
+      root.style.setProperty('--copy-hov', 'var(--copy-hov-l)');
       root.style.setProperty('--popup-bkg', 'var(--popup-bkg-l)');
       root.style.setProperty('--popup-txt', 'var(--popup-txt-l)');
       root.style.setProperty('--btn-out', 'var(--btn-out-l)');
@@ -239,10 +244,10 @@ function switchTheme() {
       root.style.setProperty('--new-game-menu-bkg', 'var(--new-game-menu-bkg-d)');
       root.style.setProperty('--new-game-menu-out', 'var(--new-game-menu-out-d)');
       root.style.setProperty('--new-game-menu-hov', 'var(--new-game-menu-hov-d)');
-      root.style.setProperty('--done-bkg', 'var(--done-bkg-d)');
-      root.style.setProperty('--done-txt', 'var(--done-txt-d)');
-      root.style.setProperty('--done-out', 'var(--done-out-d)');
-      root.style.setProperty('--done-hov', 'var(--done-hov-d)');
+      root.style.setProperty('--copy-bkg', 'var(--copy-bkg-d)');
+      root.style.setProperty('--copy-txt', 'var(--copy-txt-d)');
+      root.style.setProperty('--copy-out', 'var(--copy-out-d)');
+      root.style.setProperty('--copy-hov', 'var(--copy-hov-d)');
       root.style.setProperty('--popup-bkg', 'var(--popup-bkg-d)');
       root.style.setProperty('--popup-txt', 'var(--popup-txt-d)');
       root.style.setProperty('--btn-out', 'var(--btn-out-d)');

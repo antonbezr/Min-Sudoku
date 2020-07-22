@@ -277,14 +277,9 @@ input:focus {
 
 /*************************** NEW GAME OPTIONS ***************************/
 
-
 .secondary-menu {
   margin-bottom: var(--scale-10);
 }
-
-/*.new-game-difficulty {
-  display: none;
-}*/
 
 .new-game-difficulty button {
   font-size: var(--scale-12);

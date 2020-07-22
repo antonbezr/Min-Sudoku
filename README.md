@@ -6,7 +6,7 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 
 ## Development
 
-The frontend was developed using vanilla JavaScript and pure CSS. The Sudoku is displayed using HTML5 canvas, which seamlessly integrates into many browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices.
+The frontend was developed using vanilla JavaScript and pure CSS. The Sudoku grid is displayed using HTML5 canvas, which seamlessly integrates into many browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices.
 
 Libraries used:
 * Icons - Font Awesome.

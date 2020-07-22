@@ -1,3 +1,4 @@
+/* UPDATES COORDINATES TO DRAW ELEMENTS */
 function updateCoords() {
    let size = canvas.width;
    let offset = size / 190;
@@ -13,6 +14,7 @@ function updateCoords() {
    }
 }
 
+/* DRAWS ALL GUESSES FOR TILES NOT FILLED IN */
 function drawGuesses() {
    // Initialize canvas
    let ctx = canvas.getContext('2d');
@@ -21,7 +23,6 @@ function drawGuesses() {
    let offset = size / 190;
    let tileSize = (size - 10) / 9;
    ctx.font = (size / 31.5) + "px Open Sans";
-
    // Draw each guess on board
    for (let i = 0; i < 81; i++) {
       if (board[i].val == 0) {
@@ -38,6 +39,7 @@ function drawGuesses() {
    }
 }
 
+/* DRAWS ALL TILES THAT ARE FILLED IN */
 function drawBoard() {
    // Initialize canvas
    let ctx = canvas.getContext('2d');
@@ -47,7 +49,6 @@ function drawBoard() {
    let tileSize = (size - offset * 2) / 9;
    let fontSize = size / 16.9;
    ctx.font = fontSize + "px Open Sans";
-
    // Draw each tile on board
    for (let i = 0; i < 81; i++) {
       if (board[i].val > 0) {
@@ -68,6 +69,7 @@ function drawBoard() {
    }
 }
 
+/* DRAWS SUDOKU OUTLINE GRID */
 function drawGrid() {
    // Initalize canvas
    let ctx = canvas.getContext("2d");
@@ -75,15 +77,13 @@ function drawGrid() {
    ctx.beginPath();
    ctx.lineWidth = size / 380;
    let offset = size / 190;
-
    // Draw Sudoku tile outlines
    ctx.strokeStyle = style.getPropertyValue('--sudoku-out-tiles');;
    let tileSize = (size - offset * 2) / 9;
    for (let i = 0; i < 81; i++) {
       ctx.strokeRect(coords[i].x, coords[i].y, tileSize, tileSize);
    }
-
-   // // Draw Sudoku block outlines
+   // Draw Sudoku block outlines
    ctx.strokeStyle = style.getPropertyValue('--sudoku-out-board');
    let blockSize = (size - offset * 2) / 3;
    for (let i = 0; i < 3; i++) {
@@ -91,11 +91,11 @@ function drawGrid() {
          ctx.strokeRect(offset + blockSize * i, offset + blockSize * j, blockSize, blockSize);
       }
    }
-
    // Draw Sudoku board Outline
    ctx.strokeRect(offset, offset, size - offset * 2, size - offset * 2);
 }
 
+/* DRAWS SELECTOR IF USER CLICKS ON BOARD AND SELECTS TILE */
 function drawSelector() {
    // Initialize canvas
    let ctx = canvas.getContext('2d');
@@ -103,14 +103,12 @@ function drawSelector() {
    let offset = size / 190;
    let offset2 = size / 948;
    let tileSize = (size - offset * 2) / 9;
-
    // If tile selected, draw new selector
    if (select >= 0) {
       ctx.lineWidth = size / 237.5;
       ctx.strokeStyle = style.getPropertyValue('--sudoku-selector');
       ctx.strokeRect(coords[select].x, coords[select].y, tileSize, tileSize);
       ctx.fillStyle = style.getPropertyValue('--sudoku-selector');
-
       ctx.globalAlpha = 0.1;
       for (let i = 0; i < 81; i++) {
          if (i != select) {
@@ -125,9 +123,8 @@ function drawSelector() {
 }
 
 /* RESIZES CANVAS AND DRAWS ALL ELEMENTS */
-function draw(desktop) {
-
-   if (desktop) {
+function draw(initialize) {
+   if (initialize) {
       let width = window.innerWidth;
       let height = window.innerHeight;
       let size = 0;
@@ -150,12 +147,10 @@ function draw(desktop) {
       canvas.style.width = oldWidth.toString() + "px";
       canvas.style.height = oldHeight.toString() + "px";
    }
-
    let ctx = canvas.getContext("2d");
    size = canvas.width;
    ctx.fillStyle = style.getPropertyValue('--bg');
    ctx.fillRect(0, 0, size, size);
-
    updateCoords();
    document.fonts.load('12pt "Open Sans"').then(drawGuesses);
    document.fonts.load('12pt "Open Sans"').then(drawBoard);

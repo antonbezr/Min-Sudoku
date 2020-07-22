@@ -79,6 +79,7 @@ function generateEmptyBoard() {
    for (let i = 0; i < 81; i++) board.push(new Tile(0, false));
 }
 
+/* GETS NEW GAME (SEND REQUEST TO SERVER) */
 function newGame(mode) {
    var xhr = new XMLHttpRequest();
    let id = Math.floor(Math.random() * 1000) + 1;
@@ -207,6 +208,7 @@ function loadCookie(decodeSuccessful) {
    }
 }
 
+/* IMPORTS A BOARD FROM URL VARIABLES */
 function importBoard() {
    if (customId != null && customId > 0 && customId <= 1000) {
       let xhr = new XMLHttpRequest();
@@ -251,7 +253,7 @@ function importBoard() {
    return false;
 }
 
-/*  UPDATES GAME IF USER HAS MADE INPUT */
+/* UPDATES GAME IF USER HAS MADE INPUT */
 function updateButtons() {
    notesButton.classList.remove("disabled");
    if (customGame) {
@@ -288,7 +290,7 @@ function updateButtons() {
    }
 }
 
-/*  UPDATES GAME IF USER HAS MADE INPUT */
+/* UPDATES GAME IF USER HAS MADE INPUT */
 function update(text) {
    updateButtons();
    if (text == "board") {
@@ -316,6 +318,7 @@ function update(text) {
    if (navigator.cookieEnabled && !customGame) createCookie();
 }
 
+/* MAIN METHOD CALLED UPON STARTUP */
 function main() {
    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);

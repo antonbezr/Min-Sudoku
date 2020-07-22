@@ -1,3 +1,4 @@
+/* SHOWS/HIDES NEW GAME MENU */
 function toggleNewGame() {
    if (customGame) {
       copy.classList.remove("hide");
@@ -12,6 +13,7 @@ function toggleNewGame() {
    newGameMenu = !newGameMenu;
 }
 
+/* SHOWS/HIDES COPY MENU */
 function toggleCopy() {
    if (!customGame) {
       newGameDifficulty.classList.add("hide");
@@ -21,6 +23,7 @@ function toggleCopy() {
    }
 }
 
+/* TURNS ON CUSTOM MODE & SHOWS DONE BUTTON */
 function toggleCustom() {
    newGameDifficulty.classList.toggle("hide");
    doneButton.classList.toggle("hide");
@@ -28,6 +31,7 @@ function toggleCustom() {
    update("start-custom-game");
 }
 
+/* HIDES DONE BUTTON AND FINISHES CUSTOM MODE */
 function toggleDone() {
    copy.classList.remove("hide");
    doneButton.classList.toggle("hide");
@@ -37,7 +41,7 @@ function toggleDone() {
    update();
 }
 
-/* TOGGLES NOTE MODE, ENABLED BY PRESSING THE NOTES BUTTON OR (N)*/
+/* TOGGLES NOTE MODE, ENABLED BY PRESSING THE NOTES BUTTON OR (N) */
 function toggleNotes() {
    if (notes) {
       notesButton.style.backgroundColor = "var(--bg)";
@@ -53,20 +57,13 @@ function toggleNotes() {
 /* IF THE USER PRESSES ANY KEY ON THE KEYBOARD */
 function keyPress() {
    // Close board editor if user finished creating board
-   if (customGame && event.keyCode == 13) {
-      toggleDone();
-   }
-
+   if (customGame && event.keyCode == 13) toggleDone();
    if (copyTime && event.keyCode == 13) {
       copyBtn.click();
       toggleCopy();
    }
-
    // E pressed (enable notes (guesses))
-   if (!customGame && event.keyCode == 78) {
-      toggleNotes();
-   }
-
+   if (!customGame && event.keyCode == 78) toggleNotes();
    if (select >= 0) {
       // Arrow key pressed (move board)
       if (event.keyCode >= 37 && event.keyCode <= 40) {
@@ -100,7 +97,6 @@ function keyPress() {
                board[select].det = saveDet;
             }
             update("board");
-
          } else if (!board[select].det && notes) { // Change guesses if notes is on
             board[select].guesses[event.keyCode - 49] = !board[select].guesses[event.keyCode - 49];
             update("board");
@@ -169,7 +165,6 @@ function clickBoard(event) {
       x: CANVAS_SCALE * (event.clientX - rect.left),
       y: CANVAS_SCALE * (event.clientY - rect.top)
    };
-
    // Determine if guess clicked (tile already selected)
    let tileOffsetSize = canvas.width / 9;
    if (select >= 0 && pos.x >= coords[select].x && pos.x <= (coords[select].x + tileOffsetSize) &&
@@ -194,7 +189,7 @@ function clickBoard(event) {
    }
 }
 
-
+/* SWITCHES THEME THROUGH CSS VARIABLES */
 function switchTheme() {
    if (darkMode) {
       modeButton.classList.add("fas", "fa-sun");
@@ -272,6 +267,7 @@ function switchTheme() {
    update("board");
 }
 
+/* HIDES DIFFERENT ELEMENTS WHEN USER CLICKS BACKGROUND */
 function touchOutside(event) {
    // Turn OFF new game menu if clicked outfside of it
    if (event.target != newGameButton && event.target != customButton && event.target != doneButton
@@ -285,7 +281,6 @@ function touchOutside(event) {
       customGame = false;
       copyTime = false;
    }
-
    // Turn off board if clicked outside the board
    if (event.target != canvas && event.target != notesButton) {
       let outsideClick = true;
@@ -324,12 +319,7 @@ function exportBoard() {
    }
 }
 
-/* FUNCTION ALLOWING SAFARI TO PROCESS CLICK AFTER */
-function processClick() {
-   if (uploaded) shareButton.click();
-   uploaded = false;
-}
-
+/* SETS UP ALL EVENT LISTENERS FOR THE GAME */
 function input() {
    modeButton.addEventListener("click", function() {switchTheme();});
    newGameButton.addEventListener("click", function() {toggleNewGame();});
@@ -339,17 +329,13 @@ function input() {
    customButton.addEventListener("click", function() {toggleCustom();});
    doneButton.addEventListener("click", function() {toggleDone();});
    shareButton.addEventListener("click", function() {exportBoard();});
-   
    canvas.addEventListener("click", function(event) {clickBoard(event);});
-   
    for (let i = 0; i < 9; i++) {
       numButtons[i].addEventListener("click", function(id) {numButtonPressed(this.getAttribute("id"));});
    }
    notesButton.addEventListener("click", function() {toggleNotes();});
-   
    // Turn ON/OFF features based on clicks outside elements
    document.addEventListener("click", function(event) {touchOutside(event)});
-   
    // Keyboard listener for key values pressed by user (that aren"t numbers)
    var down = false;
    document.addEventListener("keydown", function(event) {if(down) return; down = true; keyPress(event);});

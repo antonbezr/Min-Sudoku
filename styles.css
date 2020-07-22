@@ -329,11 +329,6 @@ input:focus {
   border-radius: var(--scale-4);
 }
 
-#done b {
-  background-color: transparent;
-  font-family: Open Sans Bold;
-}
-
 #done:hover {
   background-color: var(--new-game-menu-hov);
 }

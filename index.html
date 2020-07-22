@@ -10,21 +10,25 @@
 <body>
   <div class="centered">
     <div id="main-menu">
-      <button id="mode" class="far fa-moon dark"></button>
+      <button id="mode" class="far fa-moon dark" title="Theme"></button>
       <a id="difficulty"><b>Difficulty: </b>Easy</a>
       <button id="new-game">New Game</button>
-      <button id="share-board" class="fas fa-share-alt"></button>
-      <input id="link" class="hide" type="text" value="yeehaw">
+      <button id="share-board" data-clipboard-text="wow" class="fas fa-share-alt" title="Share Board"></button>
+      <!-- <input id="link" class="hide" type="text" value="yeehaw"> -->
     </div>
     <div class="secondary-menu">
-      <span id="new-game-difficulty" class="new-game-difficulty">
+      <span id="new-game-difficulty" class="new-game-difficulty hide">
         <button id="custom">Custom</button><!--
         --><button id="easy">Easy</button><!--
         --><button id="medium">Medium</button><!--
         --><button id="hard">Hard</button>
       </span>
-      <button id="done" class="done"><b>Done</b></button>
-      <button id="popup-txt" class="hidden-no-animation">Link copied to clipboard!</button>
+      <button id="done" class="hide"><b>Done</b></button>
+      <!-- <button id="popup-txt" class="hidden-no-animation">Link copied to clipboard!</button> -->
+      <span id="copy" class="hidden">
+        <input id="copy-txt" type="text" readonly="readonly" value="yeehaw"><!--
+      --><button id="copy-btn" data-clipboard-text="">Copy</button>
+      </span>
     </div>
     <canvas id="board"></canvas>
     <div id="bot-btn-menu">
@@ -41,6 +45,7 @@
     </div>
   </div>
   <script src="https://kit.fontawesome.com/9708269266.js" crossorigin="anonymous"></script>
+  <script src="js/clipboard.min.js" type="text/javascript"></script>
   <script src="js/input.js" type="text/javascript"></script>
   <script src="js/draw.js" type="text/javascript"></script>
   <script src="js/app.js" type="text/javascript"></script>

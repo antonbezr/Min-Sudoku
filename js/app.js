@@ -9,8 +9,9 @@ const newGameButton = document.getElementById("new-game");
 const customButton = document.getElementById("custom");
 const doneButton = document.getElementById("done");
 const shareButton = document.getElementById("share-board");
-const copyText = document.getElementById("link");
-const popup = document.getElementById("popup-txt");
+const copy = document.getElementById("copy");
+const copyText = document.getElementById("copy-txt");
+const copyBtn = document.getElementById("copy-btn");
 const newGameDifficulty = document.getElementById("new-game-difficulty");
 const newGameEasy = document.getElementById("easy");
 const newGameMedium = document.getElementById("medium");
@@ -18,6 +19,8 @@ const newGameHard = document.getElementById("hard");
 const canvas = document.getElementById("board");
 const numButtons = document.getElementsByClassName("num");
 const notesButton = document.getElementById("notes");
+
+new ClipboardJS('#copy-btn');
 
 var encodedBoard = "";
 var customId = 0;
@@ -28,12 +31,14 @@ var darkMode = true;
 var link = "";
 var newGameMenu = false;
 var customGame = false;
+var copyTime = false;
 var saveBoard = [];
 var saveDifficulty = "";
 var done = false;
 
 var exportId = 0;
 var boardAltered = true;
+var uploaded = false;
 
 var select = -1;
 var notes = false;
@@ -171,7 +176,7 @@ function createCookie() {
 }
 
 /* LOAD CACHED TILES, THEME, AND DIFFICULTY*/
-function loadCookie() {
+function loadCookie(decodeSuccessful) {
    let allCookies = document.cookie.split('; ');
 
    let boardCookie = "";
@@ -184,20 +189,22 @@ function loadCookie() {
       boardCookie = allCookies[1];
       optionsCookie = allCookies[0];
    }
-   for (let i = 0; i < 81; i++) {
-      board[i].val = parseInt(boardCookie.charAt(i * 11 + 6));
-      if (boardCookie.charAt(i * 11 + 7) == 1) board[i].det = true;
-      else board[i].det = false;
-      for (let j = 0; j < 9; j++) {
-         if (boardCookie.charAt(i * 11 + 8 + j) == 1) board[i].guesses[j] = true;
-         else board[i].guesses[j] = false;
+   if (!decodeSuccessful) {
+      for (let i = 0; i < 81; i++) {
+         board[i].val = parseInt(boardCookie.charAt(i * 11 + 6));
+         if (boardCookie.charAt(i * 11 + 7) == 1) board[i].det = true;
+         else board[i].det = false;
+         for (let j = 0; j < 9; j++) {
+            if (boardCookie.charAt(i * 11 + 8 + j) == 1) board[i].guesses[j] = true;
+            else board[i].guesses[j] = false;
+         }
       }
+      difficultyTxt.innerHTML = optionsCookie.slice(9);
+      saveDifficulty = difficultyTxt.innerHTML;
    }
    if (optionsCookie.charAt(8) == 0) {
       switchTheme();
    }
-   difficultyTxt.innerHTML = optionsCookie.slice(9);
-   saveDifficulty = difficultyTxt.innerHTML;
 }
 
 function importBoard() {
@@ -319,9 +326,8 @@ function main() {
    generateEmptyBoard();
    let decodeSuccessful = importBoard();
 
-   if (!decodeSuccessful && navigator.cookieEnabled && document.cookie != "") {
-      generateEmptyBoard();
-      loadCookie();
+   if (navigator.cookieEnabled && document.cookie != "") {
+      loadCookie(decodeSuccessful);
       validateBoard(false);
    } else if (!decodeSuccessful) {
       newGame("easy");

@@ -1,53 +1,41 @@
-/* TOGGLES THE NEW GAME MENU */
 function toggleNewGame() {
    if (customGame) {
-      popup.classList.toggle("hide");
-      doneButton.classList.toggle("show");
+      copy.classList.remove("hide");
+      doneButton.classList.toggle("hide");
       customGame = !customGame;
-      update("close-custom-game");
+      // update("close-custom-game");
    } else {
-      popup.classList.toggle("hide");
-      newGameDifficulty.classList.toggle("show");
+      copy.classList.toggle("hide");
+      copy.classList.add("hidden");
+      newGameDifficulty.classList.toggle("hide");
    }
    newGameMenu = !newGameMenu;
 }
 
-/* TURNS ON THE CUSTOM GAME DONE BUTTON */
+function toggleCopy() {
+   if (!customGame) {
+      newGameDifficulty.classList.add("hide");
+      copy.classList.remove("hide");
+      copy.classList.toggle("hidden");
+      copyTime = !copyTime;
+   }
+}
+
 function toggleCustom() {
-   newGameDifficulty.classList.toggle("show");
-   doneButton.classList.toggle("show");
+   newGameDifficulty.classList.toggle("hide");
+   doneButton.classList.toggle("hide");
    customGame = !customGame;
    update("start-custom-game");
 }
 
-/* TOGGLES THE CUSTOM GAME DONE BUTTON */
 function toggleDone() {
-   popup.classList.toggle("hide");
-   doneButton.classList.toggle("show");
+   copy.classList.remove("hide");
+   doneButton.classList.toggle("hide");
    customGame = !customGame;
    newGameMenu = !newGameMenu;
    boardAltered = true;
    update();
 }
-
-/* SHOWS THE BOARD SHARE MESSAGE POPUP */
-function hidePopup() {
-   popup.classList.remove("visible");
-   popup.classList.add("hidden");
-}
-
-/* HIDES THE BOARD SHARE MESSAGE POPUP */
-function showPopup() {
-   if (!newGameMenu) {
-      popup.classList.remove("hidden-no-animation");
-      popup.classList.remove("hidden");
-      popup.classList.add("visible");
-      setTimeout(function() {
-         hidePopup();
-      }, 500);
-   }
-}
-
 
 /* TOGGLES NOTE MODE, ENABLED BY PRESSING THE NOTES BUTTON OR (N)*/
 function toggleNotes() {
@@ -281,12 +269,16 @@ function switchTheme() {
 
 function touchOutside(event) {
    // Turn OFF new game menu if clicked outfside of it
-   if (event.target != newGameButton && event.target != customButton &&
-      event.target != doneButton &&
-      !customGame && newGameMenu) {
-      popup.classList.toggle("hide");
-      newGameDifficulty.classList.toggle("show");
+   if (event.target != newGameButton && event.target != customButton && event.target != doneButton
+      && event.target != shareButton && event.target != copyText && event.target != copyBtn
+      && ((newGameMenu && !customGame) || copyTime)) {
+      console.log(1);
+      copy.classList.remove("hide");
+      copy.classList.add("hidden");
+      newGameDifficulty.classList.add("hide");
       newGameMenu = false;
+      customGame = false;
+      copyTime = false;
    }
 
    // Turn off board if clicked outside the board
@@ -315,22 +307,22 @@ function exportBoard() {
       xhr.open('GET', url, true);
       xhr.onload = function() {
          exportId = parseInt(this.responseText);
-         boardAltered = false;
          copyText.setAttribute("value", "https://min-sudoku.netlify.app/?id=" + exportId);
-         copyText.classList.remove("hide");
-         copyText.select();
-         copyText.setSelectionRange(0, 99999);
-         document.execCommand("copy");
-         copyText.classList.add("hide");
+         copyBtn.setAttribute("data-clipboard-text", "https://min-sudoku.netlify.app/?id=" + exportId);
+         boardAltered = false;
+         uploaded = true;
+         toggleCopy();
       }
       xhr.send();
-   } else if (exportId > 0) {
-      copyText.classList.remove("hide");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      copyText.classList.add("hide");
+   } else {
+      toggleCopy();
    }
+}
+
+/* FUNCTION ALLOWING SAFARI TO PROCESS CLICK AFTER */
+function processClick() {
+   if (uploaded) shareButton.click();
+   uploaded = false;
 }
 
 function input() {
@@ -341,7 +333,7 @@ function input() {
    newGameHard.addEventListener("click", function() {update("new-hard");});
    customButton.addEventListener("click", function() {toggleCustom();});
    doneButton.addEventListener("click", function() {toggleDone();});
-   shareButton.addEventListener("click", function() {exportBoard(); showPopup();});
+   shareButton.addEventListener("click", function() {exportBoard();});
    
    canvas.addEventListener("click", function(event) {clickBoard(event);});
    
@@ -352,7 +344,6 @@ function input() {
    
    // Turn ON/OFF features based on clicks outside elements
    document.addEventListener("click", function(event) {touchOutside(event)});
-   document.addEventListener("touchstart", function(event) {touchOutside(event)});
    
    // Keyboard listener for key values pressed by user (that aren"t numbers)
    var down = false;

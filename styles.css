@@ -170,6 +170,7 @@
   --scale-26: calc(var(--size) / 18);
   --scale-40: calc(var(--size) / 11.7);
   --scale-43: calc(var(--size) / 11);
+  --scale-half: calc(var(--size) / 2);
 }
 
 /*************************** FONTS ***************************/
@@ -274,42 +275,6 @@ input:focus {
   border:none;
 }
 
-#link {
-  border: none;
-  pointer-events: none;
-}
-
-/*************************** BOARD SHARE POPUP ***************************/
-
-#popup-txt {
-  font-size: var(--scale-12);
-  padding: var(--scale-4);
-  padding-left: var(--scale-8);
-  padding-right: var(--scale-8);
-  background-color: var(--popup-bkg);
-  color: var(--popup-txt);
-  border: solid;
-  border-width: var(--scale-1);
-  border-radius: var(--scale-4);
-  border-color: var(--popup-bkg);
-}
-
-.hidden-no-animation {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 500ms ease, visibility 0s ease 0s;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 500ms ease, visibility 0s ease 500ms;
-}  
-
 /*************************** NEW GAME OPTIONS ***************************/
 
 
@@ -317,9 +282,9 @@ input:focus {
   margin-bottom: var(--scale-10);
 }
 
-.new-game-difficulty {
+/*.new-game-difficulty {
   display: none;
-}
+}*/
 
 .new-game-difficulty button {
   font-size: var(--scale-12);
@@ -351,8 +316,7 @@ input:focus {
   border-bottom-right-radius: var(--scale-4);
 }
 
-.done {
-  display: none;
+#done {
   font-size: var(--scale-12);
   padding: var(--scale-4);
   padding-left: var(--scale-10);
@@ -365,20 +329,57 @@ input:focus {
   border-radius: var(--scale-4);
 }
 
-.done b {
+#done b {
   background-color: transparent;
   font-family: Open Sans Bold;
 }
 
-.done:hover {
+#done:hover {
   background-color: var(--done-hov);
 }
 
-/*************************** SHOW/HIDE ***************************/
-
-.show {
+#copy-txt {
   display: inline;
+  min-width: calc(var(--scale-half) - var(--scale-10));
+  /*width: value.length;*/
+  font-size: var(--scale-12);
+  padding: var(--scale-4);
+  padding-left: var(--scale-10);
+  padding-right: var(--scale-10);
+  background-color: var(--done-bkg);
+  color: var(--done-txt);
+  border: solid;
+  border-right: none;
+  border-width: var(--scale-1);
+  border-color: var(--done-out);
+  border-radius: var(--scale-4);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
+
+#copy-btn {
+  display: inline;
+  font-size: var(--scale-12);
+  padding: var(--scale-4);
+  padding-left: var(--scale-10);
+  padding-right: var(--scale-10);
+  background-color: var(--done-bkg);
+  color: var(--done-txt);
+  border: solid;
+  border-width: var(--scale-1);
+  border-color: var(--done-out);
+  border-radius: var(--scale-4);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#copy-btn:hover {
+  background-color: var(--done-hov);
+}
+
+.hidden {
+  visibility: hidden;
+}  
 
 .hide {
   display: none;

@@ -10,6 +10,8 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 2. Easy, Medium, and Hard difficulty - Play at your preferred difficulty.
 3. Import custom Sudoku - Play any Sudoku you want (ex: NYT daily Sudokus).
 4. Sudoku share - Send a link to your friends so you can play the same puzzle.
+5. Notes mode - Insert potential solutions for each Sudoku square.
+6. Cookie save state - Saves Sudoku progress despite closing out window.
 
 ## Backend
 

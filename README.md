@@ -22,9 +22,9 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 ## Demo
 
 <p align="center">
-    <em>The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
- </em>
+    The game can be found here: https://min-sudoku.netlify.app/ (Server may take a few seconds to start up).
 </p>
+
 
 <p align="center">
   <img src="https://i.imgur.com/AjrgvsI.png" width="384" height="384">

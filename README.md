@@ -30,7 +30,7 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 ## Demo
 
 <p align="center">
-    Link to the app: https://min-sudoku.netlify.app/ (server may take a few seconds to start up).
+    Link to the app: https://min-sudoku.netlify.app/ (server may take a minute to start up).
 </p>
 
 <p align="center">

@@ -19,7 +19,7 @@ The frontend was developed using vanilla JavaScript and pure CSS. The Sudoku gri
 
 Libraries used:
 * Icons - Font Awesome.
-* Clipboard - clipboard.js.
+* Clipboard functionality - clipboard.js.
 
 ## Backend
 

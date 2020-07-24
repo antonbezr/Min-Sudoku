@@ -37,8 +37,8 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/AjrgvsI.png" width="384" height="384">
-  <img src="https://i.imgur.com/Qv5EE6T.png" width="384" height="384">
+  <img src="https://i.imgur.com/NRhqbUp.png" width="384" height="384">
+  <img src="https://i.imgur.com/uEEWylT.png" width="384" height="384">
 </p>
 
 <p align="center">

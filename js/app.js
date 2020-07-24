@@ -54,6 +54,16 @@ class Tile {
       ];
       this.err = false;
    }
+
+   constructor(val, det, a, b, c, d, e, f, g, h, i) {
+      this.val = val;
+      this.det = det;
+      this.guesses = [a, b, c,
+                      d, e, f,
+                      g, h, i
+      ];
+      this.err = false;
+   }
 }
 
 class Coord {
@@ -108,7 +118,10 @@ function newGame(mode) {
 /* RETURNS A COPY OF THE BOARD */
 function makeBoardCopy(board) {
    let copyTiles = [];
-   for (let i = 0; i < 81; i++) copyTiles.push(new Tile(board[i].val, board[i].det));
+   for (let i = 0; i < 81; i++) copyTiles.push(new Tile(board[i].val, board[i].det,
+      board[i].guesses[0], board[i].guesses[1], board[i].guesses[2],
+      board[i].guesses[3], board[i].guesses[4], board[i].guesses[5],
+      board[i].guesses[6], board[i].guesses[7], board[i].guesses[8]));
    return copyTiles;
 }
 

@@ -112,7 +112,7 @@ function keyPress() {
             else board[select].val = event.keyCode - 48;
             update("board");
          }
-      } else if (event.keyCode == 8) { // Backspace is pressed (delete tile from board)
+      } else if (event.keyCode == 8 || event.keyCode == 32) { // Backspace is pressed (delete tile from board)
          if (customGame) {
             board[select].val = 0;
             board[select].det = false;

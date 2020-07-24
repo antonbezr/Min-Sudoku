@@ -1,8 +1,8 @@
-# Min-Sudoku
+# Min Sudoku
 
 ## About
 
-Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The application featured here is a web game that allows you to play Sudokus online.
+Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The application featured here is a web game that allows you to play Sudoku online.
 
 ### Features
 
@@ -37,11 +37,11 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/AjrgvsI.png" width="384" height="384">
-  <img src="https://i.imgur.com/Qv5EE6T.png" width="384" height="384">
+  <img src="https://i.imgur.com/NRhqbUp.png" width="384" height="384">
+  <img src="https://i.imgur.com/uEEWylT.png" width="384" height="384">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/RJc4p2D.png" width="384" height="384">
-  <img src="https://i.imgur.com/PKrdSzC.png" width="384" height="384">
+  <img src="https://i.imgur.com/q1VxH9D.png" width="384" height="384">
+  <img src="https://i.imgur.com/x87JcWd.png" width="384" height="384">
 </p>

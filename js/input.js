@@ -341,6 +341,7 @@ function fillGuesses() {
       board[i].val = 0;
     }
   }
+  update("board");
 }
 
 /* SETS UP ALL EVENT LISTENERS FOR THE GAME */

@@ -42,6 +42,6 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/RJc4p2D.png" width="384" height="384">
-  <img src="https://i.imgur.com/PKrdSzC.png" width="384" height="384">
+  <img src="https://i.imgur.com/q1VxH9D.png" width="384" height="384">
+  <img src="https://i.imgur.com/x87JcWd.png" width="384" height="384">
 </p>

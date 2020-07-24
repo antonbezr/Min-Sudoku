@@ -56,6 +56,12 @@ function toggleNotes() {
 
 /* IF THE USER PRESSES ANY KEY ON THE KEYBOARD */
 function keyPress() {
+   if (event.keyCode == 27) {
+      select = -1;
+      if (customGame) {
+         toggleNewGame();
+      }
+   }
    // Close board editor if user finished creating board
    if (customGame && event.keyCode == 13) toggleDone();
    if (copyTime && event.keyCode == 13) {

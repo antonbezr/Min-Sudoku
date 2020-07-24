@@ -22,9 +22,7 @@ The frontend was developed using vanilla JavaScript with styling done in CSS. Th
 * draw.js - Draws and updates the Sudoku grid when a change is detected.
 * input.js - Handles all of the input for the game (clicks + keyboard events).
 
-Libraries used:
-* Icons - Font Awesome.
-* Clipboard functionality - clipboard.js.
+Libraries used: Icons - Font Awesome, Clipboard functionality - clipboard.js.
 
 ### Backend
 

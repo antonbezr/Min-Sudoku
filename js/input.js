@@ -53,7 +53,6 @@ function toggleNotes() {
    update();
 }
 
-
 /* IF THE USER PRESSES ANY KEY ON THE KEYBOARD */
 function keyPress() {
    if (event.keyCode == 27) {
@@ -327,6 +326,23 @@ function exportBoard() {
    }
 }
 
+/* UPDATE ALL POSSIBLE VALUE OPTIONS OF EACH TILE */
+function fillGuesses() {
+  for (let i = 0; i < board.length; i++) {
+    if (board[i].val == 0) {
+      for (let j = 0; j < 9; j++) {
+        board[i].val = j + 1;
+        if (validateBoard(true)) {
+          board[i].guesses[j] = true;
+        } else {
+          board[i].guesses[j] = false;
+        }
+      }
+      board[i].val = 0;
+    }
+  }
+}
+
 /* SETS UP ALL EVENT LISTENERS FOR THE GAME */
 function input() {
    modeButton.addEventListener("click", function() {switchTheme();});
@@ -348,4 +364,6 @@ function input() {
    var down = false;
    document.addEventListener("keydown", function(event) {if(down) return; down = true; keyPress(event);});
    document.addEventListener("keyup", function () {down = false;});
+
+   difficultyTxt.addEventListener("dblclick", fillGuesses);
 }

@@ -15,13 +15,19 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 
 ## Development
 
+### Frontend
+
 The frontend was developed using vanilla JavaScript with styling done in CSS. The Sudoku grid is displayed using HTML5 canvas, which seamlessly integrates into browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices.
+
+JavaScript:
+* draw.js - Draws and updates the Sudoku grid when the user makes a move.
+* 
 
 Libraries used:
 * Icons - Font Awesome.
 * Clipboard functionality - clipboard.js.
 
-## Backend
+### Backend
 
 Having a backend server for this project was necessary because generating Sudoku puzzles is very resource intensive. A computer can create a random Sudoku puzzle very quickly, but in order to generate a good puzzle, you must use human solving techniques to gauge difficulty. Furthermore, a true Sudoku is one that requires no guessing in order to find the solution. Therefore, it is much more logical to pre-generate many Sudoku puzzles and host them on a server. Additionally, the use of a server allows for users to be able to share Sudokus with friends, which was implemented in this application.
 

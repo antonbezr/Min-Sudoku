@@ -2,7 +2,7 @@
 
 ## About
 
-Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The application featured here is a web application that allows you to play Sudoku games online.
+Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The application featured here is a web game that allows you to play Sudokus online.
 
 ### Features
 
@@ -18,8 +18,6 @@ Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudok
 ### Frontend
 
 The frontend was developed using vanilla JavaScript with styling done in CSS. The Sudoku grid is displayed using HTML5 canvas, which seamlessly integrates into browsers and eliminates the need for flash player. The application is optimized for all browsers as well as mobile devices. The JavaScript for this application was structured as follows:
-
-JavaScript:
 * app.js - Contains all of the game logic and makes requests to the server.
 * draw.js - Draws and updates the Sudoku grid when a change is detected.
 * input.js - Handles all of the input for the game (clicks + keyboard events).

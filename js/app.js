@@ -45,16 +45,6 @@ var notes = false;
 var counter = 0;
 
 class Tile {
-   constructor(val, det) {
-      this.val = val;
-      this.det = det;
-      this.guesses = [false, false, false,
-         false, false, false,
-         false, false, false
-      ];
-      this.err = false;
-   }
-
    constructor(val, det, a, b, c, d, e, f, g, h, i) {
       this.val = val;
       this.det = det;
@@ -86,7 +76,7 @@ function generateCoords() {
 /* GENERATES EMPTY BOARD */
 function generateEmptyBoard() {
    board = [];
-   for (let i = 0; i < 81; i++) board.push(new Tile(0, false));
+   for (let i = 0; i < 81; i++) board.push(new Tile(0, false, false, false, false, false, false, false, false, false, false));
 }
 
 /* GETS NEW GAME (SEND REQUEST TO SERVER) */
@@ -101,10 +91,10 @@ function newGame(mode) {
       let offsetRand = Math.floor(Math.random() * 9);
       for (let i = 0; i < 81; i++) {
          if (boardStr.charAt(i) == 0) {
-            board.push(new Tile(0, false));
+            board.push(new Tile(0, false, false, false, false, false, false, false, false, false, false));
          } else {
             let offsetVal = (parseInt(boardStr.charAt(i)) + offsetRand) % 9 + 1;
-            board.push(new Tile(offsetVal, true));
+            board.push(new Tile(offsetVal, true, false, false, false, false, false, false, false, false, false));
          }
       }
       difficultyTxt.innerHTML = "<b>Difficulty: </b>" + mode.charAt(0).toUpperCase() + mode.slice(1);

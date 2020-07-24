@@ -60,6 +60,8 @@ function keyPress() {
       select = -1;
       if (customGame) {
          toggleNewGame();
+      } else {
+         update("board");
       }
    }
    // Close board editor if user finished creating board

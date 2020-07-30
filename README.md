@@ -37,11 +37,11 @@ The backend of the project is implemented using PHP and Python. The PHP code is 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/NRhqbUp.png" width="384" height="384">
-  <img src="https://i.imgur.com/uEEWylT.png" width="384" height="384">
+  <img src="https://i.imgur.com/NRhqbUp.png" width="45%" height="45%">
+  <img src="https://i.imgur.com/uEEWylT.png" width="45%" height="45%">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/q1VxH9D.png" width="384" height="384">
-  <img src="https://i.imgur.com/x87JcWd.png" width="384" height="384">
+  <img src="https://i.imgur.com/q1VxH9D.png" width="45%" height="45%">
+  <img src="https://i.imgur.com/x87JcWd.png" width="45%" height="45%">
 </p>

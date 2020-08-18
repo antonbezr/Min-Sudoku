@@ -281,7 +281,6 @@ function touchOutside(event) {
    if (event.target != newGameButton && event.target != customButton && event.target != doneButton
       && event.target != shareButton && event.target != copyText && event.target != copyBtn
       && ((newGameMenu && !customGame) || copyTime)) {
-      console.log(1);
       copy.classList.remove("hide");
       copy.classList.add("hidden");
       newGameDifficulty.classList.add("hide");

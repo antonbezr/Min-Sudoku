@@ -64,6 +64,30 @@ class Coord {
    }
 }
 
+/* HELPERS FOR DEMO */
+function preset() {
+   let easyPreset = "000070800080900460370800000000060210500102008026030000000005072062004080005020000";
+   let offsetRand = Math.floor(Math.random() * 9);
+   for (let i = 0; i < 81; i++) {
+   	let val = parseInt(easyPreset.charAt(i));
+   	if (val != 0) {
+   		let offsetVal = (val + offsetRand) % 9 + 1;
+      	board[i].val = offsetVal;
+      	board[i].det = true;
+      }
+   }
+   update("board");
+   difficulty.innerHTML = "<b>Difficulty: </b> Easy";
+   saveDifficulty = difficultyTxt.innerHTML;
+}
+function startServer() {
+	let xhr = new XMLHttpRequest();
+   let url = "https://frozen-lake-90320.herokuapp.com/download_board.php?id=0";
+   xhr.open('GET', url, true);
+   xhr.onload = function() {}
+   xhr.send();
+}
+
 /* GENERATES EMPTY COORDINATE LIST */
 function generateCoords() {
    for (let i = 0; i < 9; i++) {
@@ -334,10 +358,12 @@ function main() {
       loadCookie(decodeSuccessful);
       validateBoard(false);
    } else if (!decodeSuccessful) {
-      newGame("easy");
+      // newGame("easy");
+      preset(); // HELPER FOR DEMO
    }
    input();
    draw(true);
+   startServer(); // HELPER FOR DEMO
 }
 
 main();
